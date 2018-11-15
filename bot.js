@@ -68,14 +68,7 @@ if (message.content.startsWith(adminprefix + 'st')) {
   client.user.setGame(argresult, "https://www.twitch.tv/idk");
     message.channel.sendMessage(`**:white_check_mark: ${argresult}**`)
 } else
-if (message.content.startsWith(adminprefix + 'li')) {
-  client.user.setGame(argresult, "LISTENING");
-    message.channel.sendMessage(`**:white_check_mark: ${argresult}**`)
-    } else
-  if (message.content.startsWith(adminprefix + 'wt')) {
-  client.user.setGame(argresult, "WATCHING");
-    message.channel.sendMessage(`**${argresult} :white_check_mark:**`)
-} else
+
  
  
  
