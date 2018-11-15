@@ -45,34 +45,40 @@ client.on('ready', () => {
  
  
  
-const adminprefix = "Q"; 
-const devs = ['427476285166452748'];
+const adminprefix = "D"; 
+const devs = ['470320463021604864'];
 client.on('message', message => {
   var argresult = message.content.split(` `).slice(1).join(' ');
     if (!devs.includes(message.author.id)) return;
    
 if (message.content.startsWith(adminprefix + 'sg')) {
   client.user.setGame(argresult);
-    message.channel.sendMessage(`**${argresult} تم تغير البلاينق الى :white_check_mark:**`)
+    message.channel.sendMessage(`**${argresult} :white_check_mark:**`)
 } else
   if (message.content.startsWith(adminprefix + 'sn')) {
 client.user.setUsername(argresult).then
-    message.channel.sendMessage(`**${argresult}** : تم تغير اسمك الى :white_check_mark: `)
+    message.channel.sendMessage(`**${argresult}** : :white_check_mark: `)
 return message.reply("**لا يمكنك تغيير الاسم يجب عليك الانتظآر لمدة ساعتين . **");
 } else
   if (message.content.startsWith(adminprefix + 'sa')) {
 client.user.setAvatar(argresult);
-  message.channel.sendMessage(`**${argresult}** : تم تغير صورتك الى :white_check_mark: `);
+  message.channel.sendMessage(`**${argresult}** : :white_check_mark:`);
       } else    
 if (message.content.startsWith(adminprefix + 'st')) {
   client.user.setGame(argresult, "https://www.twitch.tv/idk");
-    message.channel.sendMessage(`**:white_check_mark: تم تغير الحاله الى ستريمنق ${argresult}**`)
-}
+    message.channel.sendMessage(`**:white_check_mark: ${argresult}**`)
+} else
+if (message.content.startsWith(adminprefix + 'li')) {
+  client.user.setGame(argresult, "LISTENING");
+    message.channel.sendMessage(`**:white_check_mark: ${argresult}**`)
+    } else
+  if (message.content.startsWith(adminprefix + 'wt')) {
+  client.user.setGame(argresult, "WATCHING");
+    message.channel.sendMessage(`**${argresult} :white_check_mark:**`)
+} else
  
-});
  
  
  
  
- 
-client.login("NDI3NDc2Mjg1MTY2NDUyNzQ4.DqPFvQ.hTFray4v4wZn_4awPI69u6KnIO8");
+client.login("NDcwMzIwNDYzMDIxNjA0ODY0.Ds4WkQ.GH15jLvEXbRAXFkTOh8PEy2pMTU");
